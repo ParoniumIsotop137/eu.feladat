@@ -17,6 +17,8 @@ public class EUCsatlakozasFoProgram {
 
 		System.out.println("3. feladat: EU tagállamainak száma: " + allamok.size() + " db");
 		feladat.KeresettEvbenCsatlakozottak(allamok);
+		feladat.MagyarCsatlakozasDatuma(allamok);
+		feladat.MajusiCsatlakozas(allamok);
 
 	}
 

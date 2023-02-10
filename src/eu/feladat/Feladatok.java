@@ -17,4 +17,33 @@ public class Feladatok {
 
 	}
 
+	public void MagyarCsatlakozasDatuma(List<Allamok> allamok) {
+
+		String datum = "";
+
+		for (Allamok allam : allamok) {
+			if (allam.getOrszag().equals("Magyarország")) {
+				datum = allam.getCsatlakozasDatuma().toString();
+			}
+		}
+
+		System.out.println("\n5. feladat: Magyarország csatlakozásának dátuma: " + datum.replace("-", "."));
+
+	}
+
+	public void MajusiCsatlakozas(List<Allamok> allamok) {
+
+		int i = 0;
+
+		while (i < allamok.size() && allamok.get(i).getCsatlakozasDatuma().getMonthValue() != 5) {
+			i++;
+		}
+		if (i < allamok.size()) {
+			System.out.println("\n6. feladat: Májusban volt csatlakozás!");
+		} else {
+			System.out.println("\n6. feladat: Nem volt májusban csatlakozás!");
+		}
+
+	}
+
 }
