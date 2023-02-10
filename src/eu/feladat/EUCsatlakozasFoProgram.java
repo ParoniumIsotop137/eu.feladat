@@ -19,6 +19,7 @@ public class EUCsatlakozasFoProgram {
 		feladat.KeresettEvbenCsatlakozottak(allamok);
 		feladat.MagyarCsatlakozasDatuma(allamok);
 		feladat.MajusiCsatlakozas(allamok);
+		feladat.UtoljaraCsatlakozottOrszag(allamok);
 
 	}
 

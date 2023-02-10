@@ -46,4 +46,18 @@ public class Feladatok {
 
 	}
 
+	public void UtoljaraCsatlakozottOrszag(List<Allamok> allamok) {
+
+		int i = 0;
+
+		for (int j = 0; j < allamok.size(); j++) {
+			if (allamok.get(j).getCsatlakozasDatuma().isAfter(allamok.get(i).getCsatlakozasDatuma())) {
+				i = j;
+			}
+		}
+
+		System.out.println("\n7. feladat: Legutoljára csatlakozott ország: " + allamok.get(i).getOrszag());
+
+	}
+
 }
