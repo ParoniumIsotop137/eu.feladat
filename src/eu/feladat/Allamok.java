@@ -8,8 +8,8 @@ public class Allamok {
 	private LocalDate csatlakozasDatuma;
 
 	public Allamok(String[] szoveg) {
-		this.orszag = szoveg[1];
-		this.csatlakozasDatuma = LocalDate.parse((szoveg[2].replace(".", "-")));
+		this.orszag = szoveg[0];
+		this.csatlakozasDatuma = LocalDate.parse((szoveg[1].replace(".", "-")));
 	}
 
 	@Override
