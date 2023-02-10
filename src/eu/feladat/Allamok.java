@@ -12,6 +12,14 @@ public class Allamok {
 		this.csatlakozasDatuma = LocalDate.parse((szoveg[1].replace(".", "-")));
 	}
 
+	public String getOrszag() {
+		return orszag;
+	}
+
+	public LocalDate getCsatlakozasDatuma() {
+		return csatlakozasDatuma;
+	}
+
 	@Override
 	public String toString() {
 		return "Ország neve: " + this.orszag + ", csatlakozás dátuma: "

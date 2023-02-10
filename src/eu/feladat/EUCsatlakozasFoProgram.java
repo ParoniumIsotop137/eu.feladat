@@ -9,10 +9,14 @@ public class EUCsatlakozasFoProgram {
 
 		List<Allamok> allamok = new ArrayList<Allamok>();
 		FajlKezeles fajl = new FajlKezeles();
+		Feladatok feladat = new Feladatok();
 
 		allamok = fajl.FajlBeolvasas("F:\\Kurs\\Feladatok\\EU_tagallamok\\EUcsatlakozas.txt", ";");
 
-		allamok.stream().forEach(System.out::println);
+		// allamok.stream().forEach(System.out::println);
+
+		System.out.println("3. feladat: EU tagállamainak száma: " + allamok.size() + " db");
+		feladat.KeresettEvbenCsatlakozottak(allamok);
 
 	}
 
