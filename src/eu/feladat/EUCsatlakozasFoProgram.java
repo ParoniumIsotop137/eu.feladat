@@ -20,6 +20,8 @@ public class EUCsatlakozasFoProgram {
 		feladat.MagyarCsatlakozasDatuma(allamok);
 		feladat.MajusiCsatlakozas(allamok);
 		feladat.UtoljaraCsatlakozottOrszag(allamok);
+		System.out.println("\n8. feladat: Statisztika:");
+		feladat.Statisztika(allamok);
 
 	}
 

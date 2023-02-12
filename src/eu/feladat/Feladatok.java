@@ -1,6 +1,8 @@
 package eu.feladat;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Feladatok {
 
@@ -57,6 +59,30 @@ public class Feladatok {
 		}
 
 		System.out.println("\n7. feladat: Legutoljára csatlakozott ország: " + allamok.get(i).getOrszag());
+
+	}
+
+	public void Statisztika(List<Allamok> allamok) {
+
+		Map<Integer, Integer> orszagok = new HashMap<Integer, Integer>();
+
+		for (Allamok allam : allamok) {
+			orszagok.put(allam.getCsatlakozasDatuma().getYear(), 0);
+		}
+
+		for (Allamok allam : allamok) {
+			for (Map.Entry<Integer, Integer> orszag : orszagok.entrySet()) {
+				if (allam.getCsatlakozasDatuma().getYear() == orszag.getKey()) {
+					orszag.setValue((orszag.getValue() + 1));
+				}
+			}
+		}
+
+		StringBuilder kiiras = new StringBuilder();
+
+		orszagok.entrySet().stream().forEach(n -> kiiras.append(n.getKey() + " - " + n.getValue() + " ország\n"));
+
+		System.out.println(kiiras.toString());
 
 	}
 
